@@ -14,6 +14,6 @@
 
 FROM registry.access.redhat.com/ubi8/php-74:latest
 COPY site.conf /etc/httpd/conf.d/
-COPY . /var/www/html/
+COPY index.php /var/www/html/
 EXPOSE 8082
 CMD ["httpd", "-D", "FOREGROUND"]
